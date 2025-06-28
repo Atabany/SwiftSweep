@@ -78,11 +78,10 @@ body {
 }
 
 .logo-icon {
-    font-size: 32px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .logo-text {
@@ -270,16 +269,32 @@ body {
 
 /* Phone Mockup */
 .hero-visual {
+    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
+}
+
+.app-icon-hero {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(114, 9, 183, 0.3);
+    animation: float 3s ease-in-out infinite;
 }
 
 .phone-mockup {
     position: relative;
+    z-index: 2;
     width: 300px;
     height: 600px;
-    animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -1304,7 +1319,27 @@ body {
 }
 
 .download-cta {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.app-icon-download {
+    margin-bottom: 10px;
+}
+
+.download-app-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 12px 40px rgba(114, 9, 183, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.download-app-icon:hover {
+    transform: scale(1.05);
 }
 
 .app-store-button-large {
@@ -1619,4 +1654,21 @@ a:focus {
 .app-screenshot-hero:hover {
     transform: translateY(-10px);
     box-shadow: 0 40px 100px rgba(114, 9, 183, 0.4);
+}
+
+.app-icon-features {
+    margin-bottom: 20px;
+}
+
+.features-app-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 24px rgba(114, 9, 183, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.features-app-icon:hover {
+    transform: scale(1.1);
 }
